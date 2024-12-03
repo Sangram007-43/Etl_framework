@@ -1,0 +1,24 @@
+{
+    "table_names": {
+        "source": "inventory",
+        "target": "inventory_dim"
+    },
+
+"count_comparison": {
+        "source_query": "select count(*) from inventory",
+        "target_query": "select count(*) from inventory_dim"
+    },
+    "null_check": {
+        "target_query": "select count(*) from inventory_dim where product_id is null or openingstock is null or purchasestockin is null or numberofunitssold is null or handinstock is null or sales_date is null",
+        "null_records_query": "select * from inventory_dim where product_id is null or openingstock is null or purchasestockin is null or numberofunitssold is null or handinstock is null or sales_date is null"
+    },
+    "duplicate_check": {
+        "target_query": "select count(product_id) from inventory_dim group by product_id having count(product_id)>1",
+        "duplicate_records_query": "select product_id, count(product_id) as duplicate_count from inventory_dim group by product_id having count(product_id) > 1"
+    },
+    "column_mapping": {
+        "source_query": "select product_id ,openingstock ,purchasestockin,numberofunitssold,handinstock,date_format(sales_date,'%d-%m-%y') sales_date from inventory",
+        "target_query": "select product_id,openingstock ,purchasestockin,numberofunitssold,handinstock,sales_date from inventory_dim"
+
+    }
+}

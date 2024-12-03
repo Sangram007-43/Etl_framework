@@ -1,0 +1,24 @@
+{
+    "table_names": {
+        "source": "inventory",
+        "target": "sales_fact"
+    },
+
+"count_comparison": {
+        "source_query": "select count(*) from inventory",
+        "target_query": "select count(*) from sales_fact"
+    },
+    "null_check": {
+        "target_query": "select count(*) from sales_fact where productid is null or productname is null or totalstockavailable is null or numberofunitssold is null or currentstock is null or sale_date is null",
+        "null_records_query": "select * from sales_fact where productid is null or productname is null or totalstockavailable is null or numberofunitssold is null or currentstock is null or sale_date is null"
+    },
+    "duplicate_check": {
+        "target_query": "select count(productid) from sales_fact group by productid having count(productid)>1",
+        "duplicate_records_query": "select productid, count(productid) as duplicate_count from sales_fact group by productid having count(productid) > 1"
+    },
+    "column_mapping": {
+        "source_query": "select i.product_id as PRODUCTID,p.product_name as PRODUCTNAME, (i.openingstock + i.purchasestockin) as TOTALSTOCKAVAILABLE, i.numberofunitssold as NUMBEROFUNITSSOLD,(i.openingstock + i.purchasestockin)-i.numberofunitssold as CURRENTSTOCK,date_format(i.sales_date,'%d-%m-%y') SALE_DATE from inventory i join products p where i.product_id = p.product_id",
+        "target_query": "select productid,productname,totalstockavailable, numberofunitssold,currentstock,sale_date from sales_fact"
+
+    }
+}
