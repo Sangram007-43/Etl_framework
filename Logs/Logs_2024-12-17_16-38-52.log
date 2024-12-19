@@ -1,0 +1,12 @@
+17-12-2024 04:38:56 PM - Validations - INFO - Source Cost table Count:46
+17-12-2024 04:38:56 PM - Validations - INFO - Target Cost_dim table Count: 46
+17-12-2024 04:38:56 PM - Validations - INFO - Source & Target Count validation status: PASS
+17-12-2024 04:38:56 PM - Validations - INFO - Source & Target Record Count Validation Successfully Completed!
+17-12-2024 04:38:56 PM - Validations - INFO - Null records count:0
+17-12-2024 04:38:56 PM - Validations - INFO - Null check validation status:PASS
+17-12-2024 04:38:56 PM - Validations - INFO - Null check Validation Completed Successfully!.
+17-12-2024 04:38:56 PM - Validations - INFO - Duplicate Records count:0
+17-12-2024 04:38:56 PM - Validations - INFO - Duplicate check validation status:PASS
+17-12-2024 04:38:56 PM - Validations - INFO - Duplicate check validation completed Successfully!
+17-12-2024 04:38:56 PM - Validations - INFO - Source & Target columns mapping status: PASS
+17-12-2024 04:38:56 PM - Validations - INFO - Source & Target columns mapping completed Successfully!

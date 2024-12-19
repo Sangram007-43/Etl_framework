@@ -4,4 +4,4 @@
     "Source_Query":"select count(*) from {table_name} limit 1",
     "Target_Query":"select count(*) from {table_name} where rownum=1"
   }
-}=
+}
