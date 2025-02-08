@@ -1,1 +1,1 @@
-python C:\Users\Sangram\PycharmProjects\Configdrivenapproach\Test_Cases\count_records_SourceTables.py
+Cost_dim_validation.py
