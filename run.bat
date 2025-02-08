@@ -1,1 +1,1 @@
-python C:\Users\Sangram\.jenkins\workspace\ETL\count_records_SourceTables.py
+python C:\Users\Sangram\PycharmProjects\Configdrivenapproach\Test_Cases\count_records_SourceTables.py
