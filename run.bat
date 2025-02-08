@@ -1,1 +1,1 @@
-count_records_SourceTables.py
+python count_records_SourceTables.py
